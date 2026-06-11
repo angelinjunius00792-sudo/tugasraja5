@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form PHP</title>
 </head>
 <body>
-    <?php # membuka tag PHP
 
+<form method="get">
+    <div>
+        <label>Nama</label> <br>
+        <input name="nama" type="text" placeholder="Masukkan nama">
+    </div>
+
+    <div>
+        <label>Alamat</label> <br>
+        <input name="alamat" type="text" placeholder="Masukkan alamat">
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+<hr>
+
+<?php
 $nama = @$_GET['nama'];
 $alamat = @$_GET['alamat'];
-
-# di sini nanti kita akan tampilkan variabel $nama dan $alamat
 
 if ($nama) {
     echo "<strong>Nama:</strong> {$nama} <br>";
@@ -20,8 +32,7 @@ if ($nama) {
 if ($alamat) {
     echo "<strong>Alamat:</strong> {$alamat} <br>";
 }
-
-# jangan lupa tutup tag PHP
 ?>
+
 </body>
 </html>
