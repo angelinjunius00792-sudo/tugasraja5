@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membuat Form Sederhana</title>
+    <title>Document</title>
 </head>
 <body>
-    <form>
-        <div>
-            <label>Nama</label> <br>
-            <input name="nama" type="text" placeholder="Masukkan nama">
-        </div>
+    <?php # membuka tag PHP
 
-        <div>
-            <label>Alamat</label> <br>
-            <input name="alamat" type="text" placeholder="Masukkan alamat">
-        </div>
+$nama = @$_GET['nama'];
+$alamat = @$_GET['alamat'];
 
-        <button>Submit</button>
-    </form>
+# di sini nanti kita akan tampilkan variabel $nama dan $alamat
+
+if ($nama) {
+    echo "<strong>Nama:</strong> {$nama} <br>";
+}
+
+if ($alamat) {
+    echo "<strong>Alamat:</strong> {$alamat} <br>";
+}
+
+# jangan lupa tutup tag PHP
+?>
 </body>
 </html>
